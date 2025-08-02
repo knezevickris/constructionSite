@@ -20,7 +20,7 @@
 /* Colors */
 :root {
   --color-default: #364d59;
-  --color-primary: #feb900;
+  --color-primary: 	#3e7eb6;
   --color-secondary: #52565e;
 }
 
@@ -44,7 +44,8 @@ a {
 }
 
 a:hover {
-  color: #ffc732;
+  /*color: #ffc732;*/
+  color:#6eccc7;
   text-decoration: none;
 }
 
@@ -391,7 +392,8 @@ section {
 
   .navbar .dropdown .dropdown ul {
     top: 0;
-    left: calc(100% - 30px);
+    /*left: calc(100% - 30px);*/
+    left: 100%;
     visibility: hidden;
   }
 
@@ -415,11 +417,22 @@ section {
 
 @media (min-width: 1280px) {
 
+  .navbar .dropdown .dropdown ul {
+    top: 0;
+    left: 100%;
+    right: auto;
+    visibility: hidden;
+    transition: 0.3s ease;
+    white-space: nowrap;
+  }
+
   .mobile-nav-show,
   .mobile-nav-hide {
     display: none;
   }
 }
+
+
 
 /*--------------------------------------------------------------
 # Mobile Navigation
@@ -1645,7 +1658,7 @@ section {
   line-height: 0;
   color: var(--color-primary);
   border-radius: 50%;
-  border: 2px dotted #ffd565;
+  border: 2px dotted #215d82;
 }
 
 .contact .info-item h3 {
@@ -1744,7 +1757,8 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
+ /* background: rgba(254, 185, 0, 0.8);*/
+  background: rgba(33,93,130,255);
 }
 
 @keyframes animate-loading {
@@ -2345,7 +2359,7 @@ section {
 }
 
 .blog .sidebar .search-form form button:hover {
-  background: rgba(254, 185, 0, 0.8);
+  background: rgba(168, 104, 232, 0.8);
 }
 
 .blog .sidebar .categories ul {
