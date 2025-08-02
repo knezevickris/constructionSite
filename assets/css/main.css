@@ -190,7 +190,7 @@ section {
 }
 
 .scroll-top:hover {
-  background: #ffc732;
+  background: #215d82;
   color: #fff;
 }
 
@@ -256,7 +256,7 @@ section {
 }
 
 .header .logo img {
-  max-height: 40px;
+  max-height: 80px;
   margin-right: 6px;
 }
 
@@ -424,6 +424,10 @@ section {
     visibility: hidden;
     transition: 0.3s ease;
     white-space: nowrap;
+  }
+  .navbar .dropdown .dropdown:hover > ul {
+    opacity: 1;
+    visibility: visible;
   }
 
   .mobile-nav-show,
@@ -670,7 +674,7 @@ section {
 }
 
 .get-started .php-email-form button[type=submit]:hover {
-  background: rgba(254, 185, 0, 0.8);
+  background: rgba(33,93,130,255);
 }
 
 @keyframes animate-loading {
@@ -1506,7 +1510,7 @@ section {
 }
 
 .project-details .portfolio-info .btn-visit:hover {
-  background: #ffc019;
+  background: #215d82;
 }
 
 .project-details .portfolio-description h2 {
@@ -1757,7 +1761,6 @@ section {
 }
 
 .contact .php-email-form button[type=submit]:hover {
- /* background: rgba(254, 185, 0, 0.8);*/
   background: rgba(33,93,130,255);
 }
 
@@ -2359,7 +2362,7 @@ section {
 }
 
 .blog .sidebar .search-form form button:hover {
-  background: rgba(168, 104, 232, 0.8);
+  background: rgba(33,93,130,255);
 }
 
 .blog .sidebar .categories ul {

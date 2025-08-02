@@ -39,8 +39,8 @@
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
 
       <a href="index.html" class="logo d-flex align-items-center">
-        <img src="assets/img/logo-removebg.png" alt="Logo VB Inženjering-a" style="height: 60px; margin-right: 10px;">
-        <h1>VB INŽENJERING</h1>
+        <img src="assets/img/logo-removebg.png" alt="Logo VB Inženjering-a" style=" margin-right: 10%;">
+        <h1 style="font-size: 4vh;">VB INŽENJERING</h1>
       </a>
 
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
@@ -227,30 +227,7 @@
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const submenus = document.querySelectorAll(".navbar .dropdown .dropdown");
-
-      submenus.forEach(function (submenu) {
-        submenu.addEventListener("mouseenter", function () {
-          const submenuList = submenu.querySelector("ul");
-
-          submenuList.style.left = "100%";
-          submenuList.style.right = "auto";
-
-          requestAnimationFrame(() => {
-            const rect = submenuList.getBoundingClientRect();
-
-            if (rect.right > window.innerWidth) {
-              submenuList.style.left = "auto";
-              submenuList.style.right = "100%";
-            }
-          });
-        });
-      });
-    });
-  </script>
-
+  <script src="assets/js/dropdown.js"></script>
 
 </body>
 
