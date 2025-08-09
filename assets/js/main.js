@@ -105,9 +105,26 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (portfolionIsotope) {
 
-    let portfolioFilter = portfolionIsotope.getAttribute('data-portfolio-filter') ? portfolionIsotope.getAttribute('data-portfolio-filter') : '*';
+    // let portfolioFilter = portfolionIsotope.getAttribute('data-portfolio-filter') ? portfolionIsotope.getAttribute('data-portfolio-filter') : '*';
+    let portfolioFilter = function(itemElem) {
+      return itemElem.classList.contains('filter-celik') || itemElem.classList.contains('filter-vizualizacije');
+    };
+    let portfolioFilters = document.querySelectorAll('#portfolio-flters li');
+
+    portfolioFilters.forEach(function(filter) {
+      filter.addEventListener('click', function() {
+        portfolioFilters.forEach(function(el) {
+          el.classList.remove('filter-active');
+        });
+        this.classList.add('filter-active');
+
+        let filterValue = this.getAttribute('data-filter');
+        portfolioIsotope.arrange({ filter: filterValue });
+      });
+    });
     let portfolioLayout = portfolionIsotope.getAttribute('data-portfolio-layout') ? portfolionIsotope.getAttribute('data-portfolio-layout') : 'masonry';
     let portfolioSort = portfolionIsotope.getAttribute('data-portfolio-sort') ? portfolionIsotope.getAttribute('data-portfolio-sort') : 'original-order';
+
 
     window.addEventListener('load', () => {
       let portfolioIsotope = new Isotope(document.querySelector('.portfolio-container'), {
@@ -122,9 +139,19 @@ document.addEventListener('DOMContentLoaded', () => {
         el.addEventListener('click', function() {
           document.querySelector('.portfolio-isotope .portfolio-flters .filter-active').classList.remove('filter-active');
           this.classList.add('filter-active');
-          portfolioIsotope.arrange({
-            filter: this.getAttribute('data-filter')
-          });
+
+          let filterValue = this.getAttribute('data-filter');
+
+          if (filterValue === 'celik-vizualizacije') {
+            portfolioIsotope.arrange({
+              filter: function(itemElem) {
+                return itemElem.classList.contains('filter-celik') || itemElem.classList.contains('filter-vizualizacije');
+              }
+            });
+          } else {
+            portfolioIsotope.arrange({ filter: filterValue });
+          }
+
           if (typeof aos_init === 'function') {
             aos_init();
           }
