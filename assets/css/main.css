@@ -44,7 +44,6 @@ a {
 }
 
 a:hover {
-  /*color: #ffc732;*/
   color:#6eccc7;
   text-decoration: none;
 }
@@ -257,7 +256,8 @@ section {
 
 .header .logo img {
   max-height: 80px;
-  margin-right: 6px;
+  margin-right: 10%;
+  margin-top: -5%;
 }
 
 .header .logo h1 {
@@ -270,6 +270,18 @@ section {
 
 .header .logo h1 span {
   color: var(--color-primary);
+}
+
+@media (max-width: 768px) {
+  .logo img {
+    width: 60px;
+    height: auto;
+  }
+
+  .site-title {
+    font-size: 2vh;
+    text-align: left;
+  }
 }
 
 /*--------------------------------------------------------------

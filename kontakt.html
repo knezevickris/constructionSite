@@ -29,6 +29,7 @@
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
+
 </head>
 
 <style>
@@ -85,7 +86,7 @@
               </li>
             </ul>
           </li>
-          <li><a href="about.html">O nama</a></li>
+          <li><a href="o-nama.html">O nama</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
       </nav><!-- .navbar -->
@@ -152,27 +153,26 @@
           </div><!-- End Google Maps -->
 
           <div class="col-lg-6">
-           <!-- <form action="#" method="post" role="form" class="php-email-form"> -->
-            <form action="#" method="post" role="form" class="php-email-form">
+            <form action="forms/sendMail.php" id="kontakt-forma" method="post" role="form" class="php-email-form" novalidate>
               <p>Imate građevinske radove u planu? Pošaljite nam poruku i dogovorićemo se.</p>
               <div class="row gy-4">
                 <div class="col-lg-6 form-group">
-                  <input type="text" name="name" class="form-control" id="name" placeholder="Vaše ime i prezime*" required>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Vaše ime i prezime*" aria-label="Vaše ime i prezime" autocomplete="name" required>
                 </div>
                 <div class="col-lg-6 form-group">
-                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Vaš broj telefona*" required>
+                  <input type="text" class="form-control" name="phone" id="phone" placeholder="Vaš broj telefona*" aria-label="Vaš broj telefona" autocomplete="tel" required>
                 </div>
               </div>
               <div class="form-group">
-                <input type="email" class="form-control" name="email" id="email" placeholder="Vaša e-mail adresa*" required>
+                <input type="email" class="form-control" name="email" id="email" placeholder="Vaša e-mail adresa*" aria-label="Vaša email adresa" autocomplete="message" required>
               </div>
               <div class="form-group">
-                <textarea class="form-control" name="message" rows="6" placeholder="Poruka*" required></textarea>
+                <textarea class="form-control" name="message" rows="6" placeholder="Poruka*" aria-label="Poruka" required></textarea>
               </div>
               <div class="my-3">
                 <div class="loading">Sačekajte...</div>
                 <div class="error-message">Greška! Popunite sva polja i pokušajte ponovo.</div>
-                <div class="sent-message">Poruka je uspješno poslata! Hvala na interesovanju.</div>
+                <div class="sent-message">Poruka je uspešno poslata! Hvala na interesovanju.</div>
               </div>
               <div class="text-center"><button type="submit">Pošalji</button></div>
             </form>
@@ -211,7 +211,7 @@
           </div><!-- End footer links column-->
 
           <div class="col-lg-2 col-md-4 footer-links">
-            <strong><a href="about.html">O nama</a></strong>
+            <strong><a href="o-nama.html">O nama</a></strong>
           </div><!-- End footer links column-->
 
           <div class="col-lg-1 col-md-4 footer-links">

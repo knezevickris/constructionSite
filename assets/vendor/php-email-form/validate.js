@@ -76,10 +76,22 @@
     });
   }
 
-  function displayError(thisForm, error) {
-    thisForm.querySelector('.loading').classList.remove('d-block');
-    thisForm.querySelector('.error-message').innerHTML = error;
-    thisForm.querySelector('.error-message').classList.add('d-block');
-  }
+  // function displayError(thisForm, error) {
+  //   thisForm.querySelector('.loading').classList.remove('d-block');
+  //   thisForm.querySelector('.error-message').innerHTML = error;
+  //   thisForm.querySelector('.error-message').classList.add('d-block');
+  // }
+
+  // function displayError(thisForm, error) {
+  //   const errorDiv = thisForm.querySelector('.error-message');
+  //   thisForm.querySelector('.loading').classList.remove('d-block');
+  //   errorDiv.innerHTML = error;
+  //   errorDiv.classList.add('d-block');
+  //
+  //   setTimeout(() => {
+  //     errorDiv.classList.remove('d-block');
+  //   }, 5000);
+  // }
+
 
 })();
