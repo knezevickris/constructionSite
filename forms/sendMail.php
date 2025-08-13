@@ -16,8 +16,8 @@
     $brojTelefona = sanitize($_POST['phone'] ?? '');
     $poruka = sanitize($_POST['message'] ?? '');
 
-    if (!$ime || !$email || !$poruka || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        echo "Greška: Neispravan unos.";
+    if (!$ime || !$email || !$poruka || !$brojTelefona || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Greška: Neispravan unos. Popunite sva polja i pokušajte ponovo.";
         exit;
     }
 
@@ -34,7 +34,7 @@
         $mejl->Port = 587;
 
         $mejl->setFrom('testnigradjevinac@gmail.com', 'website VB Inzenjeringa');
-        $mejl->addAddress('kristinaknezevic06@gmail.com', 'Kontakt');
+        $mejl->addAddress('info.vbinzenjering@gmail.com', 'Kontakt');
 
         $mejl->isHTML();
         $mejl->Subject = 'Nova poruka sa kontakt forme sajta';
