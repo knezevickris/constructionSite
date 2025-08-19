@@ -27,6 +27,9 @@
   <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
   <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
 
@@ -39,6 +42,33 @@
     box-shadow:
             inset 0px -30px 50px rgba(255, 255, 255, 0.7),
             inset 0px 30px 50px rgba(13, 39, 80, 0.16);
+  }
+
+  .pozadina {
+    position: relative;
+    z-index: 1;
+    padding: 60px 30px;
+  }
+
+  .pozadina::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: url('assets/img/logo/naslovnica.png');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.25;
+    z-index: -1;
+  }
+
+  .team-member {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .team-member:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   }
 </style>
 
@@ -79,8 +109,8 @@
               </li>
             </ul>
           </li>
-          <li><a href="o-nama.html">O nama</a></li>
           <li><a href="kontakt.html">Kontakt</a></li>
+          <li><a href="#team">O nama</a></li>
         </ul>
       </nav><!-- .navbar -->
 
@@ -111,7 +141,7 @@
       <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg)"></div>
       <div class="carousel-item" style="background-image: url(assets/img/projects/enterijeri/apartman/2.jpeg)"></div>
       <div class="carousel-item" style="background-image: url(assets/img/slika1.jpeg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/hero-carousel/hero-carousel-5.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/projects/nadstresnica/1.png)"></div>
 
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -133,13 +163,15 @@
 
         <div class="row justify-content-between gy-4">
 
-          <div class="col-lg-6 d-flex align-items-center" data-aos="fade-up">
+          <div class="col-lg-6 d-flex align-items-center"  data-aos="fade-up">
             <div class="content">
-              <h3>Kompletna rešenja za sve vaše građevinske ideje. </h3>
-              <h4>Naša misija:</h4>
-              <p>Pružanje vrhunske usluge u oblasti građevinarstva u Beogradu i okolini, gradeći sigurne, funkcionalne i estetski privlačne objekte.</p>
-              <h4>Naša vizija:</h4>
-              <p>Istaći se kao prvi izbor za sve klijente koji traže pouzdanog partnera za izgradnju objekata koji poboljšavaju kvalitet života.</p>
+              <div class="pozadina">
+                <h3 class="mb-2">Kompletna rešenja za sve vaše građevinske ideje. </h3>
+                <h4>Naša misija:</h4>
+                <p style="color: black;">Pružanje vrhunske usluge u oblasti građevinarstva u Beogradu i okolini, gradeći sigurne, funkcionalne i estetski privlačne objekte.</p>
+                <h4>Naša vizija:</h4>
+                <p style="color: black;">Istaći se kao prvi izbor za sve klijente koji traže pouzdanog partnera za izgradnju objekata koji poboljšavaju kvalitet života.</p>
+              </div>
             </div>
           </div>
 
@@ -180,8 +212,6 @@
 
       </div>
     </section><!-- End Get Started Section -->
-
-
 
     <!-- ======= Services Section ======= -->
     <section id="services" class="services section-bg">
@@ -238,11 +268,16 @@
             </div>
           </div><!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
-            <div class="service-item position-relative" style="background-color: transparent;">
-              <img src="assets/img/logo/logoDesign.png" alt="logo gradjevinske firme VB inzenjering iz Beograda" style="width: 80%; height: 85%; margin-left: 10%; margin-top:10%; ">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative inner-shadow">
+              <div class="icon">
+                <i class="fa-solid fa-crosshairs"></i>
+              </div>
+              <h3>Geodezija</h3>
+              <p>Detaljna geodetska merenja i obeležavanje uz kompletan spektar geodetskih usluga, osiguravajući tačnost i sigurnost od samog početka izgradnje.</p>
+              <a href="usluge.html#geodezija" class="readmore stretched-link">Saznajte više <i class="bi bi-arrow-right"></i></a>
             </div>
-          </div>
+          </div><!-- End Service Item -->
 
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item position-relative inner-shadow">
@@ -283,7 +318,7 @@
                 <i class="fa-solid fa-cart-shopping"></i>
               </div>
               <h3>Prodaja materijala</h3>
-              <p>Bavimo se prodajom visokokvalitetnih hidroizolacionih materijala za građevinsku industriju. Ponosni smo što smo jedini zvanični predstavnici u Evropi kompanije Great Ocean Waterproof Technology Co., Ltd., jedne od najvećih i najrenomiranijih kineskih fabrika u oblasti hidroizolacija.</p>
+              <p>Bavimo se prodajom visokokvalitetnih hidroizolacionih materijala za građevinsku industriju. Ponosni smo što smo jedini zvanični predstavnici u Evropi kompanije za hidroizolacione materijale Great Ocean Waterproof Technology Co., Ltd.</p>
               <a href="usluge.html#prodaja" class="readmore stretched-link">Saznajte više <i class="bi bi-arrow-right"></i></a>
             </div>
           </div><!-- End Service Item -->
@@ -294,7 +329,7 @@
     </section><!-- End Services Section -->
 
     <!-- ======= Our Projects Section ======= -->
-    <section id="projects" class="projects">
+    <section id="projects" class="projects section-bg">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
@@ -331,6 +366,65 @@
       </div>
     </section><!-- End Our Projects Section -->
 
+    <section id="team" class="team section-bg">
+      <div class="container">
+
+        <div class="section-header">
+          <h2>Naš tim</h2>
+          <p>Ponosni smo što našu firmu čini tim posvećenih i iskusnih profesionalaca, spremnih da odgovore na sve izazove u građevinskoj industriji.</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6 d-flex">
+            <div class="team-member p-4 shadow-sm rounded bg-white h-100 w-100 d-flex flex-column">
+              <h4>Miljan Vujadinović</h4>
+              <p class="text-muted" style="font-style: italic;"><i class="fa-solid fa-building-columns"></i> master inž. građevinarstva</p>
+              <p>Diplomirani inženjer građevine, smer konstrukcije, sa završenim master studijama u oblastima <strong>betonskih i čeličnih konstrukcija</strong>. Posjeduje bogato iskustvo u izvođenju i projektovanju, posebno u dimenzionisanju konstruktivnih delova objekata prema savremenim standardima. Stručnjak je za rad u naprednim 3D softverima, uključujući <strong>Tekla Structures</strong>. Kao <strong>osnivač i glavni inženjer firme VB Inženjering</strong>, Miljan spaja praktično iskustvo sa modernim inženjerskim alatima, vodeći tim u realizaciji zahtevnih i kvalitetnih projekata.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex">
+            <div class="team-member p-4 shadow-sm rounded bg-white h-100 w-100 d-flex flex-column">
+              <h4>Nenad Borović</h4>
+              <p class="text-muted" style="font-style: italic;"><i class="fa-solid fa-graduation-cap"></i> dipl. inž. građevinarstva</p>
+              <p>Diplomirani inženjer građevine, smer konstrukcije, sa preko 10 godina iskustva u projektovanju i izvođenju. Specijalizovan za <strong>lamelirane i drvene konstrukcije</strong>, gde je razvio prepoznatljivu stručnost kroz veliki broj realizovanih projekata. Pored tehničkog znanja i praktičnog iskustva, odlikuje ga sistematičnost i posvećenost kvalitetu. Kao <strong>suvlasnik firme VB Inženjering</strong>, Nenad aktivno učestvuje u vođenju i razvoju poslovanja, donoseći profesionalnost i viziju napretka.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex">
+            <div class="team-member p-4 shadow-sm rounded bg-white h-100 w-100 d-flex flex-column">
+              <h4>Stefan Staletović</h4>
+              <p class="text-muted" style="font-style: italic;"><i class="fas fa-drafting-compass me-2"></i> master inž. arhitekture</p>
+              <p>Član našeg tima zadužen za <strong>arhitektonska rešenja i 3D vizualizacije</strong>, Stefan donosi kreativnost i tehničku preciznost u svaki projekat – od idejnih rešenja i legalizacije objekata, do enterijerskih i eksterijerskih vizualizacija. Njegov rad je nagrađen na konkursima, a posebno se ističe <strong>nagrada za projekat enterijera Opštine u Kosovskoj Mitrovici</strong>. Pouzdan, posvećen i orijentisan na detalje, Stefan je važan deo VB Inženjeringa.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex">
+            <div class="team-member p-4 shadow-sm rounded bg-white h-100 w-100 d-flex flex-column">
+              <h4>Nikola Marković</h4>
+              <p class="text-muted" style="font-style: italic;"><i class="fa-solid fa-building-user"></i> struk. inž. građevinarstva</p>
+              <p>Specijalista za niskogradnju i praktičnu primenu građevinske struke. Diplomirao je na <strong>Akademiji strukovnih studija Zapadna Srbija</strong>, smer građevinarstvo, steknuvši zvanje strukovnog inženjera, a trenutno pohađa master studije. Višegodišnje iskustvo stekao je u preduzeću <strong>Putevi Užice</strong>, gde je učestvovao u realizaciji brojnih infrastrukturnih projekata. Svojim znanjem u oblasti puteva, saobraćajnica i terenskih radova, Nikola donosi pouzdanost i stručnost u tim VB Inženjeringa.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex">
+            <div class="team-member p-4 shadow-sm rounded bg-white h-100 w-100 d-flex flex-column">
+              <h4>Srđan Deurić</h4>
+              <p class="text-muted" style="font-style: italic;"><i class="fa-solid fa-bolt-lightning"></i> struk. inž. elektrotehnike</p>
+              <p>Stručnjak za <strong>jaku i slabu struju</strong> sa bogatim iskustvom u izvođenju elektroinstalacija na terenu. Završio je strukovne studije elektrotehnike, a kroz višegodišnji rad razvio je visok nivo praktičnog znanja u realizaciji <strong>elektroenergetskih i telekomunikacionih sistema</strong>. Posebno se ističe u oblasti instalacija jake struje (rasveta, razvod, zaštita) i slabe struje (video nadzor, alarmni sistemi, telekomunikacije). Pouzdan i precizan, Srđan doprinosi timu VB Inženjeringa kroz kvalitetnu realizaciju i stručno vođenje elektro radova.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-6 d-flex">
+            <div class="team-member p-4 shadow-sm rounded bg-white h-100 w-100 d-flex flex-column">
+              <img src="assets/img/logo/naslovnica1.png">
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
 
   </main><!-- End #main -->
 
@@ -360,7 +454,7 @@
           </div><!-- End footer links column-->
 
           <div class="col-lg-2 col-md-4 footer-links">
-            <strong><a href="o-nama.html">O nama</a></strong>
+            <strong><a href="index.html#team">O nama</a></strong>
           </div><!-- End footer links column-->
 
           <div class="col-lg-1 col-md-4 footer-links">
