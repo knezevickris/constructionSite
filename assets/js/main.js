@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // let portfolioFilter = portfolionIsotope.getAttribute('data-portfolio-filter') ? portfolionIsotope.getAttribute('data-portfolio-filter') : '*';
     let portfolioFilter = function(itemElem) {
-      return itemElem.classList.contains('filter-celik') || itemElem.classList.contains('filter-vizualizacije');
+      return itemElem.classList.contains('filter-celik') || itemElem.classList.contains('filter-vizualizacije') || itemElem.classList.contains('filter-montazni');
     };
     let portfolioFilters = document.querySelectorAll('#portfolio-flters li');
 
@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
           if (filterValue === 'celik-vizualizacije') {
             portfolioIsotope.arrange({
               filter: function(itemElem) {
-                return itemElem.classList.contains('filter-celik') || itemElem.classList.contains('filter-vizualizacije');
+                return itemElem.classList.contains('filter-celik') || itemElem.classList.contains('filter-vizualizacije') || itemElem.classList.contains('filter-montazni');
               }
             });
           } else {

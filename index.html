@@ -91,7 +91,12 @@
           <li><a href="usluge.html">Usluge</a></li>
           <li class="dropdown"><a href="#"><span>Projekti</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
             <ul>
-              <li><a href="projekat-u-toku.html">Montažni objekti</a></li>
+              <li class="dropdown"><a href="#"><span>Montažni objekti</span><i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                <ul>
+                  <li><a href="montazni-objekti-classic.html">Klasični</a></li>
+                  <li><a href="montazni-objekti-a-frame.html">A-frame</a></li>
+                </ul>
+              </li>
               <li class="dropdown"><a href="#"><span>Čelične konstrukcije</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                 <ul>
                   <li><a href="3D-arhitektura-hale.html">Hala - 3D arhitektura</a></li>
@@ -137,11 +142,10 @@
     </div>
 
     <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
-
-      <div class="carousel-item active" style="background-image: url(assets/img/hero-carousel/hero-carousel-1.jpg)"></div>
+      <div class="carousel-item active" style="background-image: url(assets/img/slika1.jpeg)"></div>
       <div class="carousel-item" style="background-image: url(assets/img/projects/enterijeri/apartman/2.jpeg)"></div>
-      <div class="carousel-item" style="background-image: url(assets/img/slika1.jpeg)"></div>
       <div class="carousel-item" style="background-image: url(assets/img/projects/nadstresnica/1.png)"></div>
+      <div class="carousel-item" style="background-image: url(assets/img/projects/montazni/klasicni/klasik1.jpeg)"></div>
 
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
@@ -167,10 +171,10 @@
             <div class="content">
               <div class="pozadina">
                 <h3 class="mb-2">Kompletna rešenja za sve vaše građevinske ideje. </h3>
-                <h4>Naša misija:</h4>
-                <p style="color: black;">Pružanje vrhunske usluge u oblasti građevinarstva u Beogradu i okolini, gradeći sigurne, funkcionalne i estetski privlačne objekte.</p>
-                <h4>Naša vizija:</h4>
-                <p style="color: black;">Istaći se kao prvi izbor za sve klijente koji traže pouzdanog partnera za izgradnju objekata koji poboljšavaju kvalitet života.</p>
+                <h4 style="font-size: 24px;">Naša misija:</h4>
+                <p style="color: black; font-size: 16px;">Pružanje vrhunske usluge u oblasti građevinarstva u <strong>Beogradu i okolini</strong>, gradeći sigurne, funkcionalne i estetski privlačne objekte.</p>
+                <h4 style="font-size: 24px;">Naša vizija:</h4>
+                <p style="color: black; font-size: 16px;">Istaći se kao prvi izbor za sve klijente koji traže pouzdanog partnera za izgradnju objekata koji poboljšavaju kvalitet života.</p>
               </div>
             </div>
           </div>
@@ -338,29 +342,40 @@
           <br><a href="projekti.html">SVI PROJEKTI</a>
         </div>
         <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-celik">
-                      <div class="portfolio-content h-100">
-                        <img src="assets/img/projects/hala1/4.jpg" class="img-fluid" alt="3D konstrukcija hale sa tamno sivim i narandžastim akcentima">
-                        <div class="portfolio-info">
-                          <h4>Hala 1</h4>
-                          <p>3D arhitektura hale</p>
-                          <a href="assets/img/projects/hala1/4.jpg" title="3D arhitektura hale" data-gallery="portfolio-gallery-celik" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                          <a href="3D-arhitektura-hale.html" title="Više detalja" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                        </div>
-                      </div>
-                    </div><!-- End Projects Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-content h-100">
+              <img src="assets/img/projects/montazni/aFrame/ostaleKuce/aframe.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Kuće u A-frame stilu</h4>
+                <p>Veliki izbor različitih kuća</p>
+                <a href="assets/img/projects/montazni/aFrame/ostaleKuce/aframe.png" data-gallery="portfolio-gallery-montazni" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="montazni-objekti-a-frame.html#project-details-6" title="Više detalja" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div><!-- End Projects Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-content h-100">
+              <img src="assets/img/projects/hala1/4.jpg" class="img-fluid" alt="3D konstrukcija hale sa tamno sivim i narandžastim akcentima">
+              <div class="portfolio-info">
+                <h4>Čelična hala</h4>
+                <p>3D arhitektura hale</p>
+                <a href="assets/img/projects/hala1/4.jpg"  data-gallery="portfolio-gallery-celik" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="3D-arhitektura-hale.html" title="Više detalja" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div><!-- End Projects Item -->
 
-                    <div class="col-lg-4 col-md-6 portfolio-item filter-vizualizacije">
-                      <div class="portfolio-content h-100">
-                        <img src="assets/img/projects/enterijeri/ordinacija/1.jpeg" class="img-fluid" alt="">
-                        <div class="portfolio-info">
-                          <h4>Zubarska ordinacija</h4>
-                          <p>Enterijer zubarske ordinacije</p>
-                          <a href="assets/img/projects/enterijeri/ordinacija/1.jpeg" title="Enterijer zubarske ordinacije" data-gallery="portfolio-gallery-vizuelizacije" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                          <a href="dizajn-enterijera.html#project-details-1" title="Više detalja" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                        </div>
-                      </div>
-                    </div><!-- End Projects Item -->
+          <div class="col-lg-4 col-md-6 portfolio-item">
+            <div class="portfolio-content h-100">
+              <img src="assets/img/projects/enterijeri/ordinacija/1.jpeg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Zubarska ordinacija</h4>
+                <p>Enterijer zubarske ordinacije</p>
+                <a href="assets/img/projects/enterijeri/ordinacija/1.jpeg" data-gallery="portfolio-gallery-vizuelizacije" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                <a href="dizajn-enterijera.html#project-details-1" title="Više detalja" class="details-link"><i class="bi bi-link-45deg"></i></a>
+              </div>
+            </div>
+          </div><!-- End Projects Item -->
         </div>
 
       </div>
@@ -403,7 +418,7 @@
           <div class="col-lg-6 d-flex">
             <div class="team-member p-4 shadow-sm rounded bg-white h-100 w-100 d-flex flex-column">
               <h4>Nikola Marković</h4>
-              <p class="text-muted" style="font-style: italic;"><i class="fa-solid fa-building-user"></i> struk. inž. građevinarstva</p>
+              <p class="text-muted" style="font-style: italic;"><i class="fa-solid fa-building-user"></i>  struk. inž. građevinarstva</p>
               <p>Specijalista za niskogradnju i praktičnu primenu građevinske struke. Diplomirao je na <strong>Akademiji strukovnih studija Zapadna Srbija</strong>, smer građevinarstvo, steknuvši zvanje strukovnog inženjera, a trenutno pohađa master studije. Višegodišnje iskustvo stekao je u preduzeću <strong>Putevi Užice</strong>, gde je učestvovao u realizaciji brojnih infrastrukturnih projekata. Svojim znanjem u oblasti puteva, saobraćajnica i terenskih radova, Nikola donosi pouzdanost i stručnost u tim VB Inženjeringa.</p>
             </div>
           </div>
@@ -411,7 +426,7 @@
           <div class="col-lg-6 d-flex">
             <div class="team-member p-4 shadow-sm rounded bg-white h-100 w-100 d-flex flex-column">
               <h4>Srđan Deurić</h4>
-              <p class="text-muted" style="font-style: italic;"><i class="fa-solid fa-bolt-lightning"></i> struk. inž. elektrotehnike</p>
+              <p class="text-muted" style="font-style: italic;"><i class="fa-solid fa-bolt-lightning"></i>  struk. inž. elektrotehnike</p>
               <p>Stručnjak za <strong>jaku i slabu struju</strong> sa bogatim iskustvom u izvođenju elektroinstalacija na terenu. Završio je strukovne studije elektrotehnike, a kroz višegodišnji rad razvio je visok nivo praktičnog znanja u realizaciji <strong>elektroenergetskih i telekomunikacionih sistema</strong>. Posebno se ističe u oblasti instalacija jake struje (rasveta, razvod, zaštita) i slabe struje (video nadzor, alarmni sistemi, telekomunikacije). Pouzdan i precizan, Srđan doprinosi timu VB Inženjeringa kroz kvalitetnu realizaciju i stručno vođenje elektro radova.</p>
             </div>
           </div>
